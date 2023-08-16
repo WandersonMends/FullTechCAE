@@ -1,20 +1,16 @@
 package br.com.jffw.cae.controllers;
 
-<<<<<<< HEAD
-=======
+
+
 import java.util.List;
 
->>>>>>> upstream/main
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-<<<<<<< HEAD
-=======
 import org.springframework.web.bind.annotation.RequestMapping;
->>>>>>> upstream/main
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -28,11 +24,7 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
-<<<<<<< HEAD
-	@GetMapping("/usuarios/novo")
-=======
 	@GetMapping("/novo")
->>>>>>> upstream/main
 	public ModelAndView incluir() {
 		try {
 			return new ModelAndView("usuarios/novoUsuario");
@@ -41,23 +33,6 @@ public class UsuarioController {
 		}
 	}
 	
-<<<<<<< HEAD
-	@GetMapping("/remover/{id}")
-	public ModelAndView remover(@PathVariable("id") int id) {
-		try {
-			Usuario usuario = usuarioRepository.getReferenceById(id);
-			return new ModelAndView("clientes/removerUsuario", "usuario", usuario);
-		} catch (Exception e) {
-			return new ModelAndView("erro", "msg_erro", e.getMessage());
-		}
-	}
-	
-	@PostMapping("/remover")
-	public String remover(@RequestParam("id") int id, Model model) {
-		try {
-			usuarioRepository.deleteById(id);
-			return "redirect:/clientes/lista";
-=======
 	@PostMapping("/novo")
 	public String incluir(Usuario usuario, Model model) {
 		try {
@@ -116,7 +91,6 @@ public class UsuarioController {
 		try {
 			usuarioRepository.deleteById(id);
 			return "redirect:/usuarios/lista";
->>>>>>> upstream/main
 		} catch (Exception e) {
 			model.addAttribute("msg_erro", e.toString());
 			return "erro";

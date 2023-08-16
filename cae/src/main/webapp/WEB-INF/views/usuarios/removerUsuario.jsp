@@ -20,22 +20,6 @@
 </head>
 <body>
 	<div class="container">
-<<<<<<< HEAD
-		<h2 class="text-danger">Tem certeza que deseja remover este
-			usuario?</h2>
-
-		<div class="alert alert-danger">
-			<div>CPF: ${usuario.cpf}</div>
-			<div>Nome: ${usuario.nome}</div>
-		</div>
-
-		<form action="/usuarios/remover" method="post">
-
-			<div class="mb-3">
-				<input type="hidden" name="cpf" value="${usuario.cpf}" />
-				<div>
-					<a href="/clientes/lista">Não, retornar para a lista</a> |
-=======
 		<h2 class="text-danger">Tem certeza que deseja remover este	usuário?</h2>
 		<div class="alert alert-danger">
 			<div>ID: ${usuario.id}</div>
@@ -46,7 +30,6 @@
 				<input type="hidden" name="id" value="${usuario.id}" />
 				<div>
 					<a href="/usuarios/lista">Não, retornar para a lista</a> |
->>>>>>> upstream/main
 					<button type="submit" class="btn btn-danger">Sim, remover</button>
 				</div>
 			</div>
